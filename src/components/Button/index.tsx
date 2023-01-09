@@ -1,19 +1,18 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-interface IButton {
+interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  type: 'primary' | 'secondary';
-  onClick?: MouseEventHandler<HTMLButtonElement>;
+  variant: 'primary' | 'secondary';
 }
 
-const Button = ({ children, type, onClick }: IButton) => {
+const Button = ({ children, variant, ...props }: IButton) => {
   return (
     <button
-      className={`flex items-center gap-1.5 rounded-lg  px-3 py-2 text-sm font-medium ${
-        (type === 'primary' && 'bg-logo text-white') ||
-        (type === 'secondary' && 'border border-slate-300 text-slate-500')
+      className={`flex items-center gap-1.5 rounded-lg  px-3 py-2.5 text-xs font-medium ${
+        (variant === 'primary' && 'bg-logo text-white') ||
+        (variant === 'secondary' && 'border border-slate-300 text-slate-500')
       }`}
-      onClick={onClick}
+      {...props}
     >
       {children}
     </button>
