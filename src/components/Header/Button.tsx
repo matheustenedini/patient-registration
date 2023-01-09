@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, ButtonHTMLAttributes } from 'react';
 
-interface IButtons {
+interface IButtons extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   isActive?: boolean;
 }
@@ -10,8 +10,7 @@ const Buttons = ({ children, isActive }: IButtons) => {
   return (
     <button
       className={`text-sm font-medium text-slate-500 ${
-        isActive &&
-        'rounded-full border border-slate-200 px-6 py-1.5 !text-logo'
+        isActive && 'rounded-full border border-slate-200 px-5 py-2 !text-logo'
       }`}
     >
       {children}
