@@ -1,6 +1,6 @@
 import { Jost } from '@next/font/google';
 import Image from 'next/image';
-import NEWLogo from '../../../public/NEWLogo.svg';
+import Logo from '../../../public/Logo.svg';
 import Buttons from './Button';
 import User from './User';
 import profilePic from '../../../public/UserPfp.jpg';
@@ -10,13 +10,13 @@ const jost = Jost({ subsets: ['latin'] });
 const Header = () => {
   return (
     <header
-      className={`${jost.className} flex h-[85px] w-full items-center justify-between border-b border-slate-200 px-12`}
+      className={`${jost.className} flex min-h-[85px] w-full items-center justify-between border-b border-slate-200 px-12`}
     >
       {/* Left  */}
       <div className="flex">
         {/* Logo  */}
         <div className="mr-14">
-          <Image src={NEWLogo} width="120" height="120" alt="NEWLogo" />
+          <Image src={Logo} width="120" height="120" alt="Logo" />
         </div>
 
         {/* Buttons  */}

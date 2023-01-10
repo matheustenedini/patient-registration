@@ -16,9 +16,11 @@ const User = ({ name, pfp }: IUser) => {
         alt="Foto do usuário"
         className="mr-4 rounded-full"
       ></Image>
-      <span className="mr-2 font-medium">{name}</span>
 
-      <FiChevronDown className="text-sm"></FiChevronDown>
+      <button className="flex items-center">
+        <span className="mr-2 font-medium">{name}</span>
+        <FiChevronDown className="text-sm" />
+      </button>
     </div>
   );
 };
