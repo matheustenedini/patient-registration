@@ -18,8 +18,8 @@ const ExportTable = () => {
       }
     );
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Patients');
-    XLSX.writeFile(workbook, 'Patients.xlsx');
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Pacientes');
+    XLSX.writeFile(workbook, 'Pacientes.xlsx');
   };
   return (
     <Button variant="secondary" onClick={() => downloadExcel()}>
