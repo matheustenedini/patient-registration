@@ -1,6 +1,6 @@
 # Registro de pacientes
 
-![screenshot](https://user-images.githubusercontent.com/50122797/211940109-c925cfba-ca25-4e97-81a1-e5ad58136015.png)
+![screenshot](https://user-images.githubusercontent.com/50122797/211941641-afec5bb7-afa3-413a-81d9-8c37ec028b74.png)
 
 ## Sobre o projeto 
 
