@@ -4,9 +4,7 @@
 
 ## Sobre o projeto 
 
-Consulta e cadastro de pacientes
-
-[Acesse o site do projeto](https://workcom.vercel.app)
+Site para consulta e cadastro de pacientes
 
 ## Por quê?
 
