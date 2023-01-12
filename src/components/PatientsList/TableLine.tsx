@@ -56,9 +56,9 @@ const TableLine = ({ patient }: ITableLine) => {
             ))}
           <div className="flex-1 basis-[50px] text-center">
             <Dialog.Trigger asChild>
-              <span className="h-full text-lg text-slate-700 focus:outline-none">
+              <button className="h-full text-lg text-slate-700 focus:outline-none">
                 <AiOutlineEdit />
-              </span>
+              </button>
             </Dialog.Trigger>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { IPatient } from '../types/IPatient';
 import usePatientsListStore from '../store/usePatientsListStore';
 import getPatientsList from '../utils/getPatientsList';
+import defaultPatients from '../constants/defaultPatients';
 
 // keeps patientsList updated
 // gets filters info and combines with local-storage updates
@@ -17,6 +18,15 @@ export const useStorageEffect = () => {
       ),
     []
   );
+
+  // sets some patients by default
+  useEffect(() => {
+    const patientsList = getPatientsList();
+    if (!patientsList.length) {
+      localStorage['@patients'] = JSON.stringify(defaultPatients);
+      window.dispatchEvent(new Event('storage'));
+    }
+  }, []);
 
   useEffect(() => {
     const patientsList = getPatientsList();

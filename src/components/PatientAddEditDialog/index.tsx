@@ -114,6 +114,13 @@ const PatientAddEditDialog = forwardRef(
                 format="##/##/####"
                 control={control}
                 errors={errors}
+                rules={{
+                  pattern: {
+                    value:
+                      /^(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[012])[/-]\d{4}$/,
+                    message: 'Data de Nascimento inválida',
+                  },
+                }}
               />
               <Input
                 name="cpf"
@@ -124,7 +131,12 @@ const PatientAddEditDialog = forwardRef(
                 format="###.###.###-##"
                 control={control}
                 errors={errors}
-                rules={{ minLength: 11 }}
+                rules={{
+                  pattern: {
+                    value: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
+                    message: 'CPF inválido',
+                  },
+                }}
               />
             </div>
 
